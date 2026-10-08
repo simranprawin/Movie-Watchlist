@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineVerse | Multilingual Movie Watchlist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero">
+        <nav class="navbar">
+            <a href="#" class="logo">🎬 CineVerse</a>
+
+            <div class="nav-links">
+                <a href="#movies">Movies</a>
+                <a href="#watchlist">Watchlist</a>
+            </div>
+        </nav>
+
+        <div class="hero-content">
+            <p class="eyebrow">YOUR MULTILINGUAL MOVIE WORLD</p>
+            <h1>Every language.<br>Every story.</h1>
+            <p>
+                Discover Hindi, English, Tamil, Telugu, Malayalam, Kannada,
+                Korean, Japanese, Spanish and more.
+            </p>
+
+            <a href="#movies" class="hero-button">Explore Movies</a>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="stats-section">
+            <div class="stat-card">
+                <span class="stat-icon">🎞️</span>
+                <div>
+                    <strong id="totalMovies">0</strong>
+                    <small>Total Movies</small>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-icon">⭐</span>
+                <div>
+                    <strong id="watchlistCount">0</strong>
+                    <small>My Watchlist</small>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-icon">✅</span>
+                <div>
+                    <strong id="watchedCount">0</strong>
+                    <small>Watched</small>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-icon">🌍</span>
+                <div>
+                    <strong id="languageCount">0</strong>
+                    <small>Languages</small>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-heading" id="movies">
+            <div>
+                <p class="section-label">EXPLORE COLLECTION</p>
+                <h2>Find your next favourite</h2>
+            </div>
+
+            <button id="themeToggle" class="theme-button">
+                🌙 Dark Mode
+            </button>
+        </section>
+
+        <section class="controls">
+            <div class="search-box">
+                <span>🔍</span>
+                <input
+                    id="searchInput"
+                    type="search"
+                    placeholder="Search movie, language, genre..."
+                >
+            </div>
+
+            <select id="languageFilter">
+                <option value="all">All Languages</option>
+            </select>
+
+            <select id="genreFilter">
+                <option value="all">All Genres</option>
+            </select>
+
+            <select id="statusFilter">
+                <option value="all">All Movies</option>
+                <option value="watchlist">My Watchlist</option>
+                <option value="watched">Watched</option>
+                <option value="unwatched">Not Watched</option>
+            </select>
+        </section>
+
+        <div id="languageChips" class="language-chips"></div>
+
+        <section id="movieGrid" class="movie-grid"></section>
+
+        <div id="emptyState" class="empty-state hidden">
+            <div>🎥</div>
+            <h3>No movies found</h3>
+            <p>Try another search or filter.</p>
+        </div>
+
+        <section id="watchlist" class="watchlist-section">
+            <div class="section-heading">
+                <div>
+                    <p class="section-label">YOUR PERSONAL COLLECTION</p>
+                    <h2>My Watchlist</h2>
+                </div>
+            </div>
+
+            <div id="watchlistGrid" class="movie-grid watchlist-grid"></div>
+
+            <div id="emptyWatchlist" class="empty-state">
+                <div>🍿</div>
+                <h3>Your watchlist is empty</h3>
+                <p>Click “Add to Watchlist” on any movie to save it here.</p>
+            </div>
+        </section>
+    </main>
+
+    <div id="toast" class="toast"></div>
+
+    <footer>
+        <p>🎬 CineVerse — Stories from every corner of the world</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
